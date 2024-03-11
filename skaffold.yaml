@@ -5,11 +5,15 @@ deploy:
     manifests:
       - ./infra/k8s/*
 build:
-  local:
-    # build the docker image locally and do not push it to registry
-    push: false
+  # # build the docker image locally and do not push it to registry
+  # local:
+  #   push: false
+  googleCloudBuild:
+    projectId: ticketing-416906
   artifacts:
-    - image: dmsehuang/ticketing-auth
+    - image: us.gcr.io/ticketing-416906/auth
+      # # local image
+      # image: dmsehuang/ticketing-auth
       context: auth
       docker:
         dockerfile: Dockerfile
