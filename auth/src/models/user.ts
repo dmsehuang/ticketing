@@ -31,11 +31,11 @@ const userSchema = new Schema({
   },
 });
 
-const User = mongoose.model<UserDoc, UserModel>('User', userSchema);
-
 userSchema.statics.build = (attrs: UserAttrs) => {
   return new User(attrs);
 };
+
+const User = mongoose.model<UserDoc, UserModel>('User', userSchema);
 
 // // Use an interface to make sure we pass the correct type
 // // Use the typescript for type checking
