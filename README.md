@@ -21,3 +21,11 @@ Here are the steps:
    a. you specify the project id in the `googleCloudBuild` property.
    a. you can view the build history online
 1. Create a `load balancer` since the `ingress` itself only defines the rule. You will need a real load balancer to accept incoming requests.
+
+## Secret
+
+```
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<key>
+```
+
+You can run `kubectl get secrets` to see the lsit of secrets.
