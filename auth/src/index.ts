@@ -7,7 +7,9 @@ const start = async () => {
   }
 
   try {
-    await mongoose.connect('mongodb://auth-mongo-srv:27017/auth');
+    await mongoose.connect('mongodb://auth-mongo-srv:27017/auth', {
+      serverSelectionTimeoutMS: 50000,
+    });
     console.log('connected to mongoDB.');
   } catch (err) {
     console.error(err);
