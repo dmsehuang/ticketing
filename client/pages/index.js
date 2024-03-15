@@ -1,11 +1,10 @@
 import buildClient from '../api/build-client';
 
 const LandingPage = ({ currentUser }) => {
-  console.log(currentUser);
-  return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+  return currentUser ? (
+    <h1>Hello {currentUser.email}</h1>
+  ) : (
+    <h1>Welcome to Ticketing!</h1>
   );
 };
 
