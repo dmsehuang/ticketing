@@ -8,6 +8,7 @@ import { errorHandler, NotFoundError, currentUser } from '@karidx/common';
 import { createTicketRouter } from './routes/new';
 import { showTicketRouter } from './routes/show';
 import { indexTicketRouter } from './routes';
+import { updateTicketRouter } from './routes/update';
 
 const app = express();
 app.set('trust proxy', true); // there was a typo!
@@ -23,6 +24,7 @@ app.use(currentUser); // deal with cookie session first, then get the current us
 app.use(createTicketRouter);
 app.use(showTicketRouter);
 app.use(indexTicketRouter);
+app.use(updateTicketRouter);
 
 app.all('*', async () => {
   throw new NotFoundError();

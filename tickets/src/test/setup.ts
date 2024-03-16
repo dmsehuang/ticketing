@@ -32,10 +32,11 @@ afterAll(async () => {
 });
 
 // create a global available function
+// assumption: create new user id every time we call signin()
 global.signin = () => {
   // build JWT payload { id, email }
   const payload = {
-    id: '123',
+    id: new mongoose.Types.ObjectId().toHexString(),
     email: 'test@test.com',
   };
 
