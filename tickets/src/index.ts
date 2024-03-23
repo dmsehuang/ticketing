@@ -13,13 +13,21 @@ const start = async () => {
   }
 
   try {
+    // mongoose
     await mongoose.connect(process.env.MONGO_URI, {
       serverSelectionTimeoutMS: 50000,
     });
     console.log('connected to mongoDB.');
 
+    // nats
     const clientId = randomBytes(4).toString('hex');
     await natsWrapper.connect('ticketing', clientId, 'http://nats-srv:4222');
+    natsWrapper.client.on('close', () => {
+      console.log('NATS connection closed!');
+      process.exit();
+    });
+    process.on('SIGINT', () => natsWrapper.client.close());
+    process.on('SIGTERM', () => natsWrapper.client.close());
   } catch (err) {
     console.error(err);
   }
