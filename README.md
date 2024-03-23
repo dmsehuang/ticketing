@@ -29,3 +29,9 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<key>
 ```
 
 You can run `kubectl get secrets` to see the lsit of secrets.
+
+## Port forwarding
+
+```
+kubectl port-forward nats-depl <port_local>:<port_remote>
+```

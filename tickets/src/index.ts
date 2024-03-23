@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 import { app } from './app';
+import { natsWrapper } from './nats-wrapper';
+import { randomBytes } from 'crypto';
 
 const start = async () => {
   if (!process.env.JWT_KEY) {
@@ -15,6 +17,9 @@ const start = async () => {
       serverSelectionTimeoutMS: 50000,
     });
     console.log('connected to mongoDB.');
+
+    const clientId = randomBytes(4).toString('hex');
+    await natsWrapper.connect('ticketing', clientId, 'http://nats-srv:4222');
   } catch (err) {
     console.error(err);
   }
