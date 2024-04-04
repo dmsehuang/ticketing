@@ -15,7 +15,7 @@ Here are the steps:
    a. You then run `gcloud init`
    a. You will need to set the default `project`, for me `ticketing-dev`
    a. You will also need to set the default `region`, for me `us-west1`
-1. Run `gcloud container clusters get-credentials <cluster_name>`
+1. Run `gcloud container clusters get-credentials <cluster_name>`. My cluster URL is: https://console.cloud.google.com/kubernetes/clusters/details/us-west1/ticketing-dev/details?hl=en&project=ticketing-416906.
 1. Use Google Cloud Build to build the docker image online.
    a. the naming convention for the image is `us.gcr.io/{project_id}/{service_id}`
    a. you specify the project id in the `googleCloudBuild` property.
