@@ -9,6 +9,7 @@ build:
   # local:
   #   push: false
   googleCloudBuild:
+    # This is to inform skaffold to use google cloud build
     projectId: ticketing-416906
   artifacts:
     - image: us.gcr.io/ticketing-416906/auth
