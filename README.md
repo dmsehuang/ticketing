@@ -36,6 +36,7 @@ By the way, in the Docker K8S configuration, you can configure the `k8s context`
 
 ```
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=<key>
+kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=<key>
 ```
 
 You can run `kubectl get secrets` to see the lsit of secrets.
