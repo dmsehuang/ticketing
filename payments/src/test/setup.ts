@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 
 declare global {
-  var signin: () => string[];
+  var signin: (id?: string) => string[];
 }
 
 jest.mock('../nats-wrapper');
@@ -34,10 +34,10 @@ afterAll(async () => {
 
 // create a global available function
 // assumption: create new user id every time we call signin()
-global.signin = () => {
+global.signin = (id?: string) => {
   // build JWT payload { id, email }
   const payload = {
-    id: new mongoose.Types.ObjectId().toHexString(),
+    id: id || new mongoose.Types.ObjectId().toHexString(),
     email: 'test@test.com',
   };
 
