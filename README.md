@@ -61,3 +61,9 @@ docker build -t dmsehuang/auth .
 ## Frontend
 
 To bypass the https warning, type `thisisunsafe` in chrome.
+
+## Stripe
+
+You can get some test data from: https://docs.stripe.com/testing
+You can use the `tok_visa` as a test token.
+You will need to make sure your account is in test mode though.
