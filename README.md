@@ -57,3 +57,7 @@ Give the image a tag, like `your_docker_id/image_id`
 ```
 docker build -t dmsehuang/auth .
 ```
+
+## Frontend
+
+To bypass the https warning, type `thisisunsafe` in chrome.
