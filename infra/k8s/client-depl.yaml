@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: dmeshuang/ticketing-client
+          image: dmsehuang/ticketing-client
           # # google cloud
           # image: us.gcr.io/ticketing-416906/client
 ---

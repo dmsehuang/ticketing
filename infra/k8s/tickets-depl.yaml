@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tickets
-          image: dmeshuang/ticketing-tickets
+          image: dmsehuang/ticketing-tickets
           # # google cloud
           # image: us.gcr.io/ticketing-416906/tickets
           env:

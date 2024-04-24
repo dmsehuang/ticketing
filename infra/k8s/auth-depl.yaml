@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: dmeshuang/ticketing-auth
+          image: dmsehuang/ticketing-auth
           # # For google cloud
           # image: us.gcr.io/ticketing-416906/auth
           # # local build image

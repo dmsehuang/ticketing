@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: dmeshuang/ticketing-payments
+          image: dmsehuang/ticketing-payments
           # # google cloud
           # image: us.gcr.io/ticketing-416906/payments
           env:
