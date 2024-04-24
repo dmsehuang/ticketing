@@ -56,7 +56,7 @@ const start = async () => {
   new PaymentCreatedListener(natsWrapper.client).listen();
 
   app.listen(3000, () => {
-    console.log('Orders server listening on port 3000!!!');
+    console.log('dmsehuang - the orders service is listening on port 3000!');
   });
 };
 

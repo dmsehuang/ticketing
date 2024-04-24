@@ -52,7 +52,7 @@ const start = async () => {
   new OrderCancelledListener(natsWrapper.client).listen();
 
   app.listen(3000, () => {
-    console.log('Tickets server listening on port 3000!!');
+    console.log('dmsehuang - the tickets service is listening on port 3000!');
   });
 };
 

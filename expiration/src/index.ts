@@ -29,6 +29,7 @@ const start = async () => {
     process.on('SIGTERM', () => natsWrapper.client.close());
 
     new OrderCreatedListener(natsWrapper.client).listen();
+    console.log('dmeshuang - the expiration service is running!');
   } catch (err) {
     console.error(err);
   }
