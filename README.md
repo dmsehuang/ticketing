@@ -1,7 +1,7 @@
 # Ticketing
 
 The ticketing service is a platform for listing and buying tickets.
-It is a microservice and is built for learning purpose.
+It is a microservice and is built for learning purposes.
 
 ## Devlopment
 
