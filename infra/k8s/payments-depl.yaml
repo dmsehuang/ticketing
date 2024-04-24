@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
         - name: payments
-          image: us.gcr.io/ticketing-416906/payments
+          image: dmeshuang/ticketing-payments
+          # # google cloud
+          # image: us.gcr.io/ticketing-416906/payments
           env:
             - name: JWT_KEY
               valueFrom:

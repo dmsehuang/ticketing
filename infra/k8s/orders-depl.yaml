@@ -14,7 +14,9 @@ spec:
     spec:
       containers:
         - name: orders
-          image: us.gcr.io/ticketing-416906/orders
+          image: dmeshuang/ticketing-orders
+          # # for google cloud
+          # image: us.gcr.io/ticketing-416906/orders
           env:
             - name: JWT_KEY
               valueFrom:
